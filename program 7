@@ -1,0 +1,13 @@
+#include <iostream> 
+using namespace std; 
+void printDetails(string name, int age = 18, string city = "Unknown") 
+{ 
+    cout << "Name: " << name << ", Age: " << age << ", City: " << 
+city << endl; 
+} 
+int main() { 
+    printDetails("Sivani", 19, "ongole"); 
+    printDetails("Naveen", 22); 
+    printDetails("Mini"); 
+    return 0; 
+} 
