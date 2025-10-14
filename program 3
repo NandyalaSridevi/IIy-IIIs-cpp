@@ -1,0 +1,28 @@
+#include <iostream> 
+using namespace std; 
+int value = 100; 
+namespace MyMath { 
+    int value = 200; 
+ int square(int x) { 
+        return x * x; 
+    } 
+} 
+namespace MyPhysics { 
+    int value = 300; 
+int force(int mass, int acceleration) { 
+        return mass * acceleration; 
+    } 
+} 
+int main() { 
+    int value = 10;  // Local variable 
+    cout << "Local value: " << value << endl; 
+    cout << "Global value: " << ::value << endl;  // Using scope 
+resolution 
+cout << "MyMath value: " << MyMath::value << endl; 
+cout << "MyPhysics value: " << MyPhysics::value << endl; 
+cout << "Square of 5 using MyMath: " << MyMath::square(5) << endl; 
+using namespace MyPhysics; 
+cout << "Force (mass = 4, acceleration = 5) using MyPhysics: " << 
+force(4, 5) << endl; 
+return 0; 
+}
