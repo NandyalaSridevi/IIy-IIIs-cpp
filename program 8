@@ -1,0 +1,21 @@
+#include <iostream> 
+using namespace std; 
+class Number { 
+private: 
+    int value; 
+public: 
+    Number() { 
+        value = 10; 
+    } 
+    friend void showValue(Number n); 
+ 
+}; 
+void showValue(Number n) { 
+// Can access private members 
+cout << "The value is: " << n.value << endl; 
+} 
+int main() { 
+Number num; 
+showValue(num);  // Calling friend function 
+return 0; 
+}
