@@ -1,0 +1,32 @@
+#include <iostream>                                                                                    Page No:27 
+using namespace std; 
+class Time { 
+private: 
+    int h, m; 
+public: 
+     Time() { 
+        h = 0; 
+        m = 0; 
+    } 
+    Time(int hour) { 
+        h = hour; 
+        m = 0; 
+    } 
+   Time(int hour, int min) { 
+        h = hour; 
+        m = min; 
+    } 
+  void display() { 
+        cout << h << "h:" << m << "m" << endl; 
+    } 
+}; 
+int main() { 
+    Time t1;        
+    Time t2(5);    
+    Time t3(10,30); 
+ cout << "Time objects:" << endl;  
+t1.display(); 
+t2.display(); 
+t3.display(); 
+return 0; 
+} 
