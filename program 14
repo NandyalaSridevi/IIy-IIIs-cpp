@@ -1,0 +1,32 @@
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+int main() { 
+// Create a vector of integers 
+vector<int> numbers; 
+// Insertion 
+numbers.push_back(10); 
+numbers.push_back(20); 
+numbers.push_back(30); 
+cout << "Vector elements after insertion: "; 
+for (int num : numbers) 
+cout << num << " "; 
+cout << endl; 
+// Deletion 
+numbers.pop_back(); // Removes last element 
+cout << "Vector elements after deletion: "; 
+for (int num : numbers) 
+cout << num << " "; 
+cout << endl;  
+// Traversal using index 
+cout << "Traversing using index: "; 
+for (size_t i = 0; i < numbers.size(); i++) 
+cout << numbers[i] << " "; 
+cout << endl; 
+// Traversal using iterator 
+cout << "Traversing using iterator: "; 
+for (auto it = numbers.begin(); it != numbers.end(); ++it) 
+cout << *it << " "; 
+cout << endl; 
+return 0; 
+} 
