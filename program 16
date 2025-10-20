@@ -1,0 +1,147 @@
+1. Single Inheritance :
+#include <iostream>
+using namespace std;
+class Animal {
+public:
+    void eat() {
+        cout << "Eating..." << endl;
+    }
+};
+class Dog : public Animal {
+public:
+    void bark() {
+        cout << "Barking..." << endl;
+    }
+};
+int main() {
+    Dog d;
+    d.eat();
+    d.bark();
+    return 0;
+}
+2. Multiple Inheritance:
+#include <iostream>
+using namespace std;
+class Engine {
+public:
+    void startEngine() {
+        cout << "Engine started" << endl;
+    }
+};
+class Wheels {
+public:
+    void rotateWheels() {
+        cout << "Wheels rotating" << endl;
+    }
+};
+class Car : public Engine, public Wheels {
+public:
+    void drive() {
+        cout << "Car is driving" << endl;
+    }
+};
+int main() {
+    Car c;
+    c.startEngine();
+    c.rotateWheels();
+    c.drive();
+    return 0;
+}
+3.Multi-level Inheritance:
+#include <iostream>
+using namespace std;
+class Student {
+public:
+    void getDetails() {
+        cout << "Name: swathi, Roll No: 102" << endl;
+    }
+};
+class Exam : public Student {
+public:
+    void getMarks() {
+        cout << "Marks in 5 subjects: 90, 85, 88, 92, 87" << endl;
+    }
+};
+class Result : public Exam {
+public:
+    void displayResult() {
+        cout << "Total Marks: 442, Percentage: 88.4%" << endl;
+    }
+};
+int main() {
+    Result r;
+    r.getDetails();
+    r.getMarks();
+    r.displayResult();
+    return 0;
+}
+
+4. Hierarchical Inheritance:
+#include <iostream>
+using namespace std;
+class Student {
+public:
+    void getDetails() {
+        cout << "Name: swathi, Roll No: 104" << endl;
+    }
+};
+class Exam : public Student {
+public:
+    void getExamMarks() {
+        cout << "Exam Marks: 88" << endl;
+    }
+};
+class Sports : public Student {
+public:
+    void getSportsScore() {
+        cout << "Sports Score: 10/10" << endl;
+    }
+};
+int main() {
+    Exam e;
+    Sports s;
+    cout << "=== Exam Details ===" << endl;
+    e.getDetails();
+    e.getExamMarks();
+    cout << "\n=== Sports Details ===" << endl;
+    s.getDetails();
+    s.getSportsScore();
+    return 0;
+}
+
+5. Hybrid Inheritance:
+#include <iostream>
+using namespace std;
+class Student {
+public:
+    void getDetails() {
+        cout << "Name: swathi, Roll No: 105" << endl;
+    }
+};
+class Exam : public Student {
+public:
+    void getExamMarks() {
+        cout << "Exam Marks: 90" << endl;
+    }
+};
+class Sports {
+public:
+    void getSportsScore() {
+        cout << "Sports Score: 85" << endl;
+    }
+};
+class Result : public Exam, public Sports {
+public:
+    void displayResult() {
+        cout << "Final Result: Excellent" << endl;
+    }
+};
+int main() {
+    Result r;
+    r.getDetails(); 
+    r.getExamMarks();     
+    r.getSportsScore();   
+    r.displayResult();    
+
+    return 0;
+}
