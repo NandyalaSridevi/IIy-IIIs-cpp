@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+class Person {
+public:
+    void showPerson() {
+        cout << "I am a person.\n";
+    }
+};
+class Student : virtual public Person {
+public:
+    void showStudent() {
+        cout << "I am a student.\n";
+    }
+};
+class Employee : virtual public Person {
+public:
+    void showEmployee() {
+        cout << "I am an employee.\n";
+    }
+};
+class Intern : public Student, public Employee {
+public:
+    void showIntern() {
+        cout << "I am an intern.\n";
+    }
+};
+int main() {
+    Intern obj;
+    obj.showPerson();
+    obj.showStudent();
+    obj.showEmployee();
+    obj.showIntern();
+    return 0;
+} 
+
